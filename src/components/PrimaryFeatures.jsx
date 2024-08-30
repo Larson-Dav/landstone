@@ -11,6 +11,7 @@ import screenshotExpenses from '@/images/screenshots/expenses.png'
 import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import Link from 'next/link'
 
 const features = [
   {
@@ -18,24 +19,28 @@ const features = [
     description:
       "Get access to thousands of APIs now with unlimited access and unparalleled flexibility.",
     image: screenshotPayroll,
+    url: ""
   },
   {
     title: 'Mastermind code',
     description:
       "gets expert insight into rare areas of programming that push the boundaries of modern times with even more extravagant simulations.",
     image: screenshotExpenses,
+    url: "https://tryoshrelease.onrender.com/"
   },
   {
     title: 'Enlight Documentation',
     description:
       "obtains very good documentation on the thousands of APIs offered in several languages ​​and in thousands of functions.",
     image: screenshotVatReturns,
+    url: "https://apidocumentation-9dzy.onrender.com/"
   },
   {
     title: 'SK Master',
     description:
       'obtains general skills that allow you to pursue great ambitions and carry out projects even more insane than others by altering universal standards for even more superb performance.',
     image: screenshotReporting,
+    url: ""
   },
 ]
 
@@ -99,6 +104,7 @@ export function PrimaryFeatures() {
                           : 'hover:bg-white/10 lg:hover:bg-white/5',
                       )}
                     >
+                      <Link to={feature.url}>
                       <h3>
                         <Tab
                           className={clsx(
@@ -122,6 +128,7 @@ export function PrimaryFeatures() {
                       >
                         {feature.description}
                       </p>
+                      </Link>
                     </div>
                   ))}
                 </TabList>
